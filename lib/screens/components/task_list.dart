@@ -7,9 +7,9 @@ class TaskList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        TaskTile(title: 'Task #1', done: true),
-        TaskTile(title: 'Task #2', done: false),
-        TaskTile(title: 'Task #3', done: true),
+        TaskTile(),
+        TaskTile(),
+        TaskTile(),
       ],
     );
   }
