@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
-import 'package:todoey_flutter/models/task.dart';
 import 'package:todoey_flutter/models/task_data.dart';
 
 import 'add_task_screen.dart';
@@ -24,10 +23,10 @@ class _TasksScreenState extends State<TasksScreen> {
           showModalBottomSheet(
               context: context,
               builder: (context) => AddTaskScreen((String newTaskTitle) {
-                    setState(() {
-                      Provider.of<TaskData>(context)
-                          .addTask(Task(name: newTaskTitle));
-                    });
+//                    setState(() {
+//                      Provider.of<TaskData>(context)
+//                          .addTask(Task(name: newTaskTitle));
+//                    });
                     Navigator.pop(context);
                   }));
         },
@@ -66,7 +65,7 @@ class _TasksScreenState extends State<TasksScreen> {
                   ),
                 ),
                 Text(
-                  '${Provider.of<TaskData>(context).tasks.length.toString()} Tasks',
+                  '${Provider.of<TaskData>(context).tasks.length} Tasks',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18.0,
